@@ -112,8 +112,6 @@ Array(10).fill(0);
 [...Array(10)].map((_, i) => i + 1);
 Array.from(new Array(n), (x, i) => i + 1);
 new Array(n).fill().map((v, i) => i + 1);
-".".repeat(10).split("."); // 권장하지 않습니다.
-".".repeat(9).split(".");
 Array.from("ab".repeat(10));
 ```
 
@@ -160,6 +158,12 @@ function solution(my_string) {
 function solution(n) {
   const a = [n + ""][0].split("");
   return a.reduce((a, b) => +a + +b, 0);
+}
+
+let x10 = "12345";
+let result10 = 0;
+for (let i = 0; i < x10.length; i++) {
+  result10 += parseInt(x10[i]);
 }
 ```
 
