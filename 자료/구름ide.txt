@@ -1,0 +1,16 @@
+// Run by Node.js
+const readline = require('readline');
+const data = [];
+
+(async () => {
+	let rl = readline.createInterface({ input: process.stdin });
+	
+	for await (const line of rl) {
+		data.push(line);
+		rl.close();
+	}
+	
+	// 이곳에 풀이 작성
+	
+	process.exit();
+})();
